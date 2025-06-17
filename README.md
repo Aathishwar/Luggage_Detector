@@ -1,55 +1,91 @@
-# Luggage Detection with YOLO
+# 🧳 Luggage Detection with YOLO 🚀
 
-This project implements luggage detection using the YOLO (You Only Look Once) object detection model.
+This project implements **luggage detection** using the powerful **YOLO (You Only Look Once)** object detection model. Ideal for surveillance, security systems, and smart transport hubs.
 
-## Setup
+---
 
-1. Install the required packages:
-   ```
+## ⚙️ Setup
+
+1. 📦 Install the required dependencies:
+
+   ```bash
    pip install -r requirements.txt
    ```
 
-2. Download YOLO models:
-   ```
+2. ⬇️ Download YOLO models:
+
+   ```bash
    python download_yolo_model.py
-   - It will download yolo 11 and yolo v10 all versions.
    ```
 
-## Running the Detector
+   * This will download **YOLOv11** and all **YOLOv10** versions.
 
-Run the luggage detector on a video file:
-```
+---
+
+## ▶️ Running the Detector
+
+🎥 Run on a **video file**:
+
+```bash
 python luggage_detector.py --source file.mp4
 ```
 
-Run with a webcam:
-```
+📷 Run using your **webcam**:
+
+```bash
 python luggage_detector.py --source 0
 ```
-Run with a confidence:
+
+🎯 Run with a **custom confidence threshold** (e.g., 0.7):
+
+```bash
+python luggage_detector.py --source your_path --confidence 0.7
 ```
-python luggage_detector.py --source your_path  --confidence (e.g 0.7)
+## Screenshot
+![image](https://github.com/user-attachments/assets/939958e7-9f2f-436e-991e-7491cd379da7)
+
+---
+
+## 🎮 Controls
+
+* Press **`q`** or **`Esc`** ➜ Quit
+* Press **`x`** ➜ Close the window
+* Click the **❌ (close button)** on the window to exit
+
+---
+
+## 🔄 Getting the Latest YOLO Model
+
+By default, the script will:
+
+* Try to use **YOLOv11**
+* Fallback to **YOLOv10** if v11 isn't available
+
+📥 To manually download or update models:
+
+```bash
+python download_yolo_model.py
 ```
 
-## Controls
-- Press 'q' or 'Esc' to quit
-- Press 'x' to close the window
-- Click the close button (X) on the window to exit
+* Choose the model version when prompted.
 
-## Getting the Latest YOLO Model
+---
 
-The script will automatically try to use YOLOv11 if available, or fall back to YOLOv10.
+## 🛠️ Customizing Detection
 
-If you want to download the latest models:
-1. Run the download script:
-   ```
-   python download_yolo_model.py
-   ```
-2. Select the model you want to download when prompted
+You can fine-tune the **confidence threshold** to reduce false detections or detect more objects:
 
-## Customizing Detection
-
-You can adjust the confidence threshold for detections:
-```
+```bash
 python luggage_detector.py --source file.mp4 --confidence 0.7
 ```
+
+---
+
+## 📌 Notes
+
+* Make sure your video source (file path or webcam) is accessible.
+* YOLO models are downloaded only once and reused unless deleted.
+
+---
+
+
